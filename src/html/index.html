@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Evaluacion Final Yasmin</title>
     
   </head>
@@ -11,26 +12,27 @@
     <div class="page">
 
     <header class="page-header">
-      <h1>Buscador de series</h1>
+      <h1 class="page-header__title">Buscador de series</h1>
     </header>
-
-    <form class="page-formulary" action="">
+    <main class="main js-main">
+    <form class="main__form" action="">
       <label for="textinput">Introduce tu serie aquí:</label>
-      <input class="formulary-text js-input-text" type="text" id="textinput" placeholder="Ej: Breaking Bad"/>
+      <input 
+      class="formulary-text js-input-text" type="text" id="textinput" placeholder="Ej: Breaking Bad"/>
       <button class="formulary-button js-search-btn">Buscar</button>
     </form>
 
-    <div>
+    <div class="main-favorite">
       <h2>Lista de favoritos</h2>
       <ul class="list js-fav-list"></ul>
     </div>
 
-    <div>
+    <div class="main-container">
       <h2>Resultado de busqueda</h2>
       <ul class="list js-list"></ul>
     </div>
 
-    </div>
+  </main>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -1,1 +1,14 @@
-
+.page-header{
+    background-color: #41b6c5;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px #39685a;
+&__title{
+    font-size: 30px;
+    padding: 20px;
+    color: #292d3f;
+    text-align: center;
+    font-weight: lighter;
+}
+}
