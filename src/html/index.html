@@ -10,25 +10,32 @@
 
   <body>
     
-
+    <include src="./partials/header.html"></include>
    
-    <main class="main js-main">
-    <form class="main__form" action="">
-      <label for="textinput">Introduce tu serie aquí:</label>
-      <input 
-      class="formulary-text js-input-text" type="text" id="textinput" placeholder="Ej: Breaking Bad"/>
-      <button class="formulary-button js-search-btn">Buscar</button>
+    <main class="main">
+      <h2 class="main__title">Buscador de series</h2>
+      <form class="main__form" action="">
+        <input 
+        class="main__form__search js-input-text" type="text" placeholder="Ej: Breaking Bad"/>
+
+        <input class="main__form__finder
+        js-search-btn" type="button" value="Buscar"></input>
+
+        <input class="main__form__finder js-reset-btn" type="button" value="Reset"></input>
     </form>
 
-    <div class="favorite">
-      <h2 class="favorite__title">Lista de favoritos</h2>
-      <ul class="favorite__title-list js-fav-list"></ul>
+    <div class="list-container">
+      <div class="list">
+        <p class="list__title">Lista de favoritos</p>
+        <ul class="list__favorite js-fav-list"></ul>
+      </div>
+    
+      <div class="list">
+        <p class="list__title">Resultado de búsqueda</p>
+        <ul class="list__series js-list"></ul>
+      </div>
     </div>
-
-    <div class="container">
-      <h2 class="container__title">Resultado de busqueda</h2>
-      <ul class="container__title-list js-list"></ul>
-    </div>
+    
 
   </main>
     <script src="./assets/js/main.js"></script>

@@ -14,10 +14,10 @@ let series = [];
 
 let favoritesSeries = [];
 
-const seriesLS = JSON.parse(localStorage.getItem('seriesLS'));
-if (seriesLS !== null) {
-  series = seriesLS;
-  paintSeries();
+const seriesFavLS = JSON.parse(localStorage.getItem('seriesFav'));
+if (seriesFavLS !== null) {
+  favoritesSeries = seriesFavLS;
+  paintFavSeries();
 }
 
 //2.-Pintar las series
@@ -82,9 +82,10 @@ function handleClickFav(event) {
     favoritesSeries.splice(indexFavSerie, 1);
     event.currentTarget.classList.remove('title-serie');
   }
-  localStorage.setItem('seriesLS', JSON.stringify(favoritesSeries));
+  localStorage.setItem('seriesFav', JSON.stringify(favoritesSeries));
   paintFavSeries();
 }
+
 
 //3.- Función de clic de favoritos
 function addFavListener() {

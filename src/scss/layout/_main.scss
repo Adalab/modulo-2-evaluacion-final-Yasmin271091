@@ -1,57 +1,73 @@
-.main__form {
-    text-align: center;
+.main {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 900px;
+
+  &__title {
+    font-size: 2em;
+    margin-bottom: 20px;
   }
-  
-  .formulary-text {
-    width: 30%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .formulary-button {
-    padding: 10px 20px;
-    font-size: 1em;
-  }
-  
-  .list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .favorite{
-    margin-top: 30px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(80, 23, 85);
-    &__title{
-      text-align: center;
-      width: 200px;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      color: white;
+
+  &__form {
+    display: flex;
+    justify-content: center;
+
+    &__search {
+      padding: 10px;
+      font-size: 1em;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+
+    &__finder {
+      margin-left: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      background-color: #ff81ff;
+      color: #503459;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d06aff;
+      }
     }
   }
-  .container {
-    margin-top: 30px;
+  .list-container {
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgb(214, 76, 226);
-    &__title{
-      text-align: center;
-      width: 200px;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      color: white;
+  
+    .list {
+      width: 45%; 
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+  
+      &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 10px;
+      }
+  
+      &__favorite {
+        color: black;
+        background-color: #ff81ff;
+      }
+  
+      &__series {
+        color: black;
+        background-color: #503459;
+      }
     }
   }
-  
-  .title-serie {
-    width: 230px;
-    margin-top: 20px;
-    background-color: black;
-    color: purple;
+
+
+    .title-serie {
+        width: 250px;
+        background-color: #ff81ff;
+        color: white;
+    }
   }
-  
-  
-  
-  

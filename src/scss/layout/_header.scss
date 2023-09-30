@@ -1,14 +1,20 @@
 .page-header{
-    background-color: #41b6c5;
-    background-size: cover;
+    background-image: url(../images/cine.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 30vh;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 2px #39685a;
-    &__title{
-    font-size: 30px;
-    padding: 20px;
-    color: #292d3f;
-    text-align: center;
-    font-weight: lighter;
+    align-items: center;
+    border-bottom: 2px solid #39685a;
+   /*&__title{
+        font-size: 2em;
+        color: #292d3f;
+        font-weight: lighter;
+        margin: 0;
+        text-align: center;
     }
+}
+.page-header__title:hover {
+    text-decoration: underline;*/
 }
