@@ -3,13 +3,22 @@
 console.log(':)');
 
 //VARIABLES Y CONSTANTES
-const listFav = document.querySelector('.js-list-fav');
+const listFav = document.querySelector('.js-fav-list');
 const listSeries = document.querySelector('.js-list');
 const searchText = document.querySelector('.js-input-text');
 const searchButton = document.querySelector('.js-search-btn');
+
 const imgDefault = 'https://via.placeholder.com/210x295/ffffff/666666/?text=TV';
+
 let series = [];
+
 let favoritesSeries = [];
+
+const seriesLS = JSON.parse(localStorage.getItem('seriesLS'));
+if (seriesLS !== null) {
+  series = seriesLS;
+  paintSeries();
+}
 
 //2.-Pintar las series
 function paintSeries() {
@@ -27,7 +36,9 @@ function paintSeries() {
 }
 //7.- Pintar los favoritos
 function paintFavSeries() {
-    listFav.innerHTML = ''; // Limpiar el contenido previo
+  
+  listFav.innerHTML = ''; // Limpiar el contenido previo
+    
 
     favoritesSeries.forEach((serie) => {
       const imageUrl = serie.show.image? serie.show.image.medium : imgDefault;
@@ -36,8 +47,10 @@ function paintFavSeries() {
           <img src="${imageUrl}" alt="${serie.show.name}">
           <span>${serie.show.name}</span>
       </li>`;
+
     });
     addFavListener();
+
 }
 
 // 5- Función para agregar una serie a favoritos
@@ -64,10 +77,13 @@ function handleClickFav(event) {
     (item) => item.show.id === serieName);
   if (indexFavSerie === -1) {
     favoritesSeries.push(foundSerie);
+    event.currentTarget.classList.add('title-serie');
   } else {
     favoritesSeries.splice(indexFavSerie, 1);
+    event.currentTarget.classList.remove('title-serie');
   }
-  
+  localStorage.setItem('seriesLS', JSON.stringify(favoritesSeries));
+  paintFavSeries();
 }
 
 //3.- Función de clic de favoritos
@@ -83,16 +99,17 @@ function handleClickSearch(event) {
   event.preventDefault();
   const inputValue = searchText.value;
   fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
-    .then((response) => response.json())
-    .then((dataApi) => {
-      console.log(series);
-      series = dataApi;
+  .then((response) => response.json())
+  .then((dataApi) => {
+  console.log(series);
+  series = dataApi;
+ 
       const filteredShows = series.filter((item) =>
         item.show.name.toLowerCase().includes(inputValue.toLowerCase()));
-
       paintSeries(filteredShows);
       console.log(series);
-    });
+  
+  });
 }
 
 searchButton.addEventListener('click', handleClickSearch);
