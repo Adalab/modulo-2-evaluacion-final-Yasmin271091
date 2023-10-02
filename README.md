@@ -1,8 +1,8 @@
 <h1>Modulo 2. Final Evaluación Final</h1>
 
-<p>Para este módulo, hemos aprendido la implmentación de JavaScript en la página web, para que sea interactiva de cara a los usuarios.
+<p>Para este módulo, hemos aprendido la implementación de JavaScript en la página web, para que sea interactiva de cara a los usuarios.
 
-Lo he realizado implementadndo el kit de inicio web Adalab </p>
+Lo he realizado implementando el kit de inicio web Adalab </p>
 
 <h3>Buscador de series</h3>
 <p>He desarrollado un buscador de series, en la cual podrás encontrar cualquier serie escribiendo el título en el recuadro de busqueda, puedes seleccionar una serie que quiereas ver más adelanta y la puedes guardar como favorito. ¡Aparecerán aunque se refresque la página web!
