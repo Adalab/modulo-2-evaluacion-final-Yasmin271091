@@ -25,7 +25,7 @@ if (seriesFavLS !== null) {
 function paintSeries() {
   listSeries.innerHTML = ''; // Limpiar el contenido previo
 
-  series.forEach((serie) => {
+  series.findIndex((serie) => {
     const imageUrl = serie.show.image ? serie.show.image.medium : imgDefault;
     listSeries.innerHTML += `
     <li class="js-show" id="${serie.show.id}">
@@ -41,7 +41,7 @@ function paintFavSeries() {
   listFav.innerHTML = ''; // Limpiar el contenido previo
     
 
-    favoritesSeries.forEach((serie) => {
+    favoritesSeries.findIndex((serie) => {
       const imageUrl = serie.show.image? serie.show.image.medium : imgDefault;
       listFav.innerHTML += `
       <li class="js-show" id="${serie.show.id}">
@@ -119,9 +119,12 @@ searchButton.addEventListener('click', handleClickSearch);
 //9.-Boton de reset(bonus)
 function handleClickReset(event) {
   event.preventDefault();
+  localStorage.removeItem('seriesFav');
+  favoritesSeries = [];
   searchText.value = '';
   listSeries.innerHTML = '';
   listFav.innerHTML = '';
+  addFavListener();
 }
 
 resetButton.addEventListener('click', handleClickReset)
