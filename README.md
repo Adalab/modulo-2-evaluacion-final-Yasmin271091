@@ -18,7 +18,7 @@ Lo he realizado implementadndo el kit de inicio web Adalab </p>
 <h3 align="left">Contactame:</h3>
 <p align="left">
 <a href="https://www.linkedin.com/in/yasmin-jim%C3%A9nez-bravo-a0971a1b7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="yasmin jimenez bravo" height="30" width="40" /></a>
-<a href="https://instagram.com/danielacueto07" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="danielacueto07" height="30" width="40" /></a>
+<a href="https://instagram.com/yasminjb91" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="yasmin" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Lenguajes y herramientas:</h3>
