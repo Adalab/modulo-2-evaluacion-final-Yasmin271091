@@ -7,13 +7,14 @@ const listFav = document.querySelector('.js-fav-list');
 const listSeries = document.querySelector('.js-list');
 const searchText = document.querySelector('.js-input-text');
 const searchButton = document.querySelector('.js-search-btn');
+const resetButton = document. querySelector('.js-reset-btn');
 
 const imgDefault = 'https://via.placeholder.com/210x295/ffffff/666666/?text=TV';
 
 let series = [];
 
 let favoritesSeries = [];
-
+//8.-guardar en LocalStorage las series favoritas
 const seriesFavLS = JSON.parse(localStorage.getItem('seriesFav'));
 if (seriesFavLS !== null) {
   favoritesSeries = seriesFavLS;
@@ -114,3 +115,13 @@ function handleClickSearch(event) {
 }
 
 searchButton.addEventListener('click', handleClickSearch);
+
+//9.-Boton de reset(bonus)
+function handleClickReset(event) {
+  event.preventDefault();
+  searchText.value = '';
+  listSeries.innerHTML = '';
+  listFav.innerHTML = '';
+}
+
+resetButton.addEventListener('click', handleClickReset)
