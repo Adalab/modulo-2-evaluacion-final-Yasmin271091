@@ -14,7 +14,7 @@ const imgDefault = 'https://via.placeholder.com/210x295/ffffff/666666/?text=TV';
 let series = [];
 
 let favoritesSeries = [];
-//8.-guardar en LocalStorage las series favoritas
+//8.-guardar en LocalStorage las series favoritas, y que aunque busque otras series, las favoritas se mantengan
 const seriesFavLS = JSON.parse(localStorage.getItem('seriesFav'));
 if (seriesFavLS !== null) {
   favoritesSeries = seriesFavLS;
@@ -67,7 +67,7 @@ function removeFavorite(serie) {
   }
 }
 
-// 4.- Función para manejar el clic en una serie favorita
+// 4.- Función para manejar el clic en una serie favorita, buscar el id y le añade una clase para saber que la has seleccionado como favorita.
 function handleClickFav(event) {
   event.preventDefault();
   const serieName = parseInt(event.currentTarget.id);
@@ -88,7 +88,7 @@ function handleClickFav(event) {
 }
 
 
-//3.- Función de clic de favoritos
+//3.- Función con bucle para recorrer todas las series al hacer click
 function addFavListener() {
   const lishow = document.querySelectorAll('.js-show');
   for (const item of lishow) {
