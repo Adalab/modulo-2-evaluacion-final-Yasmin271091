@@ -5,7 +5,7 @@
 Lo he realizado implementando el kit de inicio web Adalab </p>
 
 <h3>Buscador de series</h3>
-<p>He desarrollado un buscador de series, en la cual podrás encontrar cualquier serie escribiendo el título en el recuadro de busqueda, puedes seleccionar una serie que quiereas ver más adelanta y la puedes guardar como favorito. ¡Aparecerán aunque se refresque la página web!
+<p>He desarrollado un buscador de series, en la cual podrás encontrar cualquier serie escribiendo el título en el recuadro de busqueda, puedes seleccionar una serie que quieras ver más adelante y la puedes guardar como favorito. ¡Aparecerán aunque se refresque la página web!
 </p>
 
 <h1 align="center">Hola 👋, Soy Yasmin Jiménez Bravo</h1>
