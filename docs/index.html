@@ -3,16 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
+    <title>Evaluacion Final Yasmin</title>
   </head>
 
+  <body>
+    <header class="page-header">
+        <h1 class="page-header__title"></h1>
+    </header>
 
+    <main class="main">
+        <h2 class="main__title">Buscador de series</h2>
+        <form class="main__form" action="">
+          <input 
+          class="main__form__search js-input-text" type="text" placeholder="Ej: Breaking Bad"/>
 
+          <input class="main__form__finder
+          js-search-btn" type="button" value="Buscar"></input>
 
-    </div>
+          <input class="main__form__finder js-reset-btn" type="button" value="Reset"></input>
+      </form>
+
+      <div class="list-container">
+        <div class="list">
+          <p class="list__title">Lista de favoritos</p>
+          <ul class="list__favorite js-fav-list"></ul>
+        </div>
+      
+        <div class="list">
+          <p class="list__title">Resultado de búsqueda</p>
+          <ul class="list__series js-list"></ul>
+        </div>
+      </div>
+    </main>
+
+  
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
